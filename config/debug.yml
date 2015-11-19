@@ -1,0 +1,23 @@
+appearance:
+  name: Slack bot
+
+receive:
+  - name: WebSocket
+    type: rtm
+    token:
+    enabled: true
+
+send:
+  - name: Slack API
+    type: api
+    token:
+    enabled: true
+
+log:
+  path: var/slackbot.log
+  level: 4
+
+server:
+  port: 8888
+  pidfile: var/core.pid
+  rtmpidfile: var/rtm.pid

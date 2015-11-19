@@ -1,0 +1,19 @@
+actions:
+  - title: Setting variable
+    action: set_variable
+    name: $num
+    value: 1
+
+  - title: Checking variable value
+    action: if
+    condition: $num = 2
+    then:
+      - title: Sending a message
+        action: send_message
+        recipients: "#general"
+        message: NUM equals 1
+    else:
+      - title: Sending a message
+        action: send_message
+        recipients: "#general"
+        message: NUM not equals 1

@@ -1,0 +1,7 @@
+actions:
+  - title: Send requested message to channel
+    action: send_message
+    recipients: "#general"
+    message: |
+      this is another bot test
+      and it can be multiline

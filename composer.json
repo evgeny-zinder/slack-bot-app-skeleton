@@ -1,0 +1,16 @@
+{
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/evgeny-zinder/slack-bot.git"
+  }],
+  "require": {
+    "evgeny-zinder/slack-bot": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "nytslack\\": "src/nytslack",
+      "tests\\nytslack\\": "tests"
+    }
+  }
+
+}

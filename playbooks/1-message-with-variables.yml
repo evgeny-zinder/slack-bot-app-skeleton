@@ -1,0 +1,25 @@
+actions:
+  - title: Initializing counter variable
+    action: set_variable
+    name: $num
+    value: 1
+
+  - title: Increasing counter variable
+    action: set_variable
+    name: $num
+    value: increment
+
+  - title: Increasing counter variable
+    action: set_variable
+    name: $num
+    value: increment
+
+  - title: Decreasing counter variable
+    action: set_variable
+    name: $num
+    value: decrement
+
+  - title: Print final variable value
+    action: send_message
+    recipients: "#general"
+    message: Final NUM value is $num

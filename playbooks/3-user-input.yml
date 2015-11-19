@@ -1,0 +1,14 @@
+actions:
+  - title: Request user input
+    action: user_input
+    messages:
+      before: Enter build ID to be deployed
+      after: Thank you for your assistance!
+    recipient: @evgenii
+    timeout: 10m
+    variable: $buildId
+    after:
+      - title: Report user input
+        action: send_message
+        recipients: "#general"
+        message: @channel: we are deploying v. $buildId of the SomeApp to production now.

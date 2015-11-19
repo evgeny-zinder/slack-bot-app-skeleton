@@ -1,0 +1,32 @@
+actions:
+  - title: Initializing counter variable
+    action: set_variable
+    name: $num
+    value: 0
+
+  - title: Iterating
+    action: loop
+    type: while
+    condition: $num <= 6
+    actions:
+      - title: Updating cycle counter
+        action: set_variable
+        name: $num
+        value: increment
+
+      - title: Checking if num is odd
+        action: if
+        condition: $num % 2
+        then:
+          - title: Continue if num is odd
+            action: continue
+
+      - title: Sending a message
+        action: send_message
+        recipients: "#general"
+        message: Loop cycle $num
+
+  - title: Sending final message
+    action: send_message
+    recipients: "#general"
+    message: all done

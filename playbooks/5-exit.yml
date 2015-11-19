@@ -1,0 +1,33 @@
+actions:
+  - title: Initializing counter variable
+    action: set_variable
+    name: $num
+    value: 1
+
+  - title: Iterating
+    action: loop
+    type: while
+    condition: $num <= 3
+    actions:
+      - title: Checking if num is 2
+        action: if
+        condition: $num = 2
+        then:
+          - title: Stop playbook processing
+            action: exit
+
+      - title: Sending a message
+        action: send_message
+        recipients: "#general"
+        message: Loop cycle $num
+
+
+      - title: Updating cycle counter
+        action: set_variable
+        name: $num
+        value: increment
+
+  - title: Sending final message
+    action: send_message
+    recipients: "#general"
+    message: all done
